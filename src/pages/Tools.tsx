@@ -16,7 +16,7 @@ const Tools = () => {
       <section className="py-16 md:py-24">
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Tools & Repos</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Tools & Repos</h1>
             <p className="text-lg text-muted-foreground">
               Open-source tools and accelerators to build production-grade agents faster. Don't start from scratch.
             </p>
@@ -44,7 +44,7 @@ const Tools = () => {
                 transition={{ delay: i * 0.05 }}
               >
                 <a href={tool.url} target="_blank" rel="noopener noreferrer">
-                  <Card className="h-full hover:shadow-lg hover:border-primary/20 transition-all group">
+                  <Card className="h-full hover:shadow-md transition-all group border-border">
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between mb-3">
                         <span className="text-3xl">{tool.emoji}</span>

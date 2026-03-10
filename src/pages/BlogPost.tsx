@@ -14,7 +14,7 @@ const BlogPost = () => {
     return (
       <Layout>
         <div className="container py-24 text-center">
-          <h1 className="text-2xl font-bold mb-4">Post not found</h1>
+          <h1 className="text-2xl font-bold mb-4 text-foreground">Post not found</h1>
           <Button asChild><Link to="/blog">Back to Blog</Link></Button>
         </div>
       </Layout>
@@ -36,7 +36,7 @@ const BlogPost = () => {
               ))}
             </div>
 
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">{post.title}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">{post.title}</h1>
 
             <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8 pb-8 border-b">
               <span>{post.author}</span>
@@ -46,15 +46,15 @@ const BlogPost = () => {
 
             <div className="prose prose-neutral max-w-none">
               {post.content.split("\n").map((line, i) => {
-                if (line.startsWith("### ")) return <h3 key={i} className="text-xl font-bold mt-8 mb-3">{line.replace("### ", "")}</h3>;
-                if (line.startsWith("## ")) return <h2 key={i} className="text-2xl font-bold mt-10 mb-4">{line.replace("## ", "")}</h2>;
+                if (line.startsWith("### ")) return <h3 key={i} className="text-xl font-bold mt-8 mb-3 text-foreground">{line.replace("### ", "")}</h3>;
+                if (line.startsWith("## ")) return <h2 key={i} className="text-2xl font-bold mt-10 mb-4 text-foreground">{line.replace("## ", "")}</h2>;
                 if (line.startsWith("```")) return null;
                 if (line.startsWith("- **")) {
                   const match = line.match(/- \*\*(.+?)\*\*: (.+)/);
-                  if (match) return <li key={i} className="ml-4 mb-1"><strong>{match[1]}</strong>: {match[2]}</li>;
+                  if (match) return <li key={i} className="ml-4 mb-1 text-muted-foreground"><strong className="text-foreground">{match[1]}</strong>: {match[2]}</li>;
                 }
-                if (line.startsWith("- ")) return <li key={i} className="ml-4 mb-1">{line.replace("- ", "")}</li>;
-                if (line.match(/^\d+\. /)) return <li key={i} className="ml-4 mb-1 list-decimal">{line.replace(/^\d+\. /, "")}</li>;
+                if (line.startsWith("- ")) return <li key={i} className="ml-4 mb-1 text-muted-foreground">{line.replace("- ", "")}</li>;
+                if (line.match(/^\d+\. /)) return <li key={i} className="ml-4 mb-1 list-decimal text-muted-foreground">{line.replace(/^\d+\. /, "")}</li>;
                 if (line.trim() === "") return <br key={i} />;
                 return <p key={i} className="text-muted-foreground leading-relaxed mb-3">{line}</p>;
               })}

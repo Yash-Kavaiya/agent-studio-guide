@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Play, Clock } from "lucide-react";
+import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -16,7 +16,7 @@ const Videos = () => {
       <section className="py-16 md:py-24">
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Videos</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Videos</h1>
             <p className="text-lg text-muted-foreground">
               Video tutorials and walkthroughs to help you build multimodal agents step by step.
             </p>
@@ -43,7 +43,7 @@ const Videos = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
               >
-                <Card className="h-full overflow-hidden hover:shadow-lg hover:border-primary/20 transition-all group">
+                <Card className="h-full overflow-hidden hover:shadow-md transition-all group border-border">
                   <div className="relative aspect-video bg-secondary flex items-center justify-center">
                     <img
                       src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`}
@@ -61,7 +61,7 @@ const Videos = () => {
                   </div>
                   <CardContent className="p-5">
                     <Badge variant="secondary" className="text-xs mb-2">{video.category}</Badge>
-                    <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">{video.title}</h3>
+                    <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors text-foreground">{video.title}</h3>
                     <p className="text-sm text-muted-foreground">{video.description}</p>
                   </CardContent>
                 </Card>

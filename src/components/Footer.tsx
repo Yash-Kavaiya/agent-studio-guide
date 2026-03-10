@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom";
-import { Zap, Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="border-t bg-secondary/30">
+    <footer className="border-t bg-secondary/40">
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-4">
           <div className="space-y-3">
             <Link to="/" className="flex items-center gap-2 font-bold text-lg">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <Zap className="h-3.5 w-3.5" />
+              <div className="flex items-center gap-[2px]">
+                <div className="h-2.5 w-2.5 rounded-full bg-[hsl(var(--google-blue))]" />
+                <div className="h-2.5 w-2.5 rounded-full bg-[hsl(var(--google-red))]" />
+                <div className="h-2.5 w-2.5 rounded-full bg-[hsl(var(--google-yellow))]" />
+                <div className="h-2.5 w-2.5 rounded-full bg-[hsl(var(--google-green))]" />
               </div>
               CX-Agent Studio
             </Link>
@@ -19,20 +22,20 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-3">Learn</h4>
+            <h4 className="font-semibold mb-3 text-foreground">Learn</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/courses" className="hover:text-foreground transition-colors">Courses</Link></li>
-              <li><Link to="/blog" className="hover:text-foreground transition-colors">Blog</Link></li>
-              <li><Link to="/videos" className="hover:text-foreground transition-colors">Videos</Link></li>
+              <li><Link to="/courses" className="hover:text-primary transition-colors">Courses</Link></li>
+              <li><Link to="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
+              <li><Link to="/videos" className="hover:text-primary transition-colors">Videos</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-3">Build</h4>
+            <h4 className="font-semibold mb-3 text-foreground">Build</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="/tools" className="hover:text-foreground transition-colors">Tools & Repos</Link></li>
+              <li><Link to="/tools" className="hover:text-primary transition-colors">Tools & Repos</Link></li>
               <li>
-                <a href="https://github.com/Yash-Kavaiya/awesome-cx-agent-studio" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors inline-flex items-center gap-1">
+                <a href="https://github.com/Yash-Kavaiya/awesome-cx-agent-studio" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors inline-flex items-center gap-1">
                   Awesome List <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
@@ -40,10 +43,10 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-3">Connect</h4>
+            <h4 className="font-semibold mb-3 text-foreground">Connect</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="https://github.com/Yash-Kavaiya" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors inline-flex items-center gap-1">
+                <a href="https://github.com/Yash-Kavaiya" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors inline-flex items-center gap-1">
                   <Github className="h-3.5 w-3.5" /> GitHub
                 </a>
               </li>
