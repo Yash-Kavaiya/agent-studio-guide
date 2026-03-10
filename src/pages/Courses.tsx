@@ -14,7 +14,7 @@ const Courses = () => {
       <section className="py-16 md:py-24">
         <div className="container">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Courses</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Courses</h1>
             <p className="text-lg text-muted-foreground">
               Master CX Agent Studio from beginner to advanced with our comprehensive curriculum.
             </p>
@@ -22,9 +22,9 @@ const Courses = () => {
 
           {/* Featured course */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden border-border">
               <div className="md:flex">
-                <div className="md:w-2/5 bg-gradient-to-br from-primary to-accent p-8 md:p-12 text-primary-foreground flex flex-col justify-center">
+                <div className="md:w-2/5 bg-primary p-8 md:p-12 text-primary-foreground flex flex-col justify-center">
                   <Badge variant="secondary" className="w-fit mb-4">Featured Course</Badge>
                   <h2 className="text-2xl md:text-3xl font-bold mb-3">{course.title}</h2>
                   <div className="flex flex-wrap gap-4 text-sm opacity-90 mb-6">
@@ -39,14 +39,14 @@ const Courses = () => {
                   </Button>
                 </div>
                 <div className="md:w-3/5 p-8 md:p-12">
-                  <h3 className="font-semibold text-lg mb-2">About This Course</h3>
+                  <h3 className="font-semibold text-lg mb-2 text-foreground">About This Course</h3>
                   <p className="text-muted-foreground mb-6">{course.longDescription}</p>
-                  <h3 className="font-semibold text-lg mb-3">What You'll Learn</h3>
+                  <h3 className="font-semibold text-lg mb-3 text-foreground">What You'll Learn</h3>
                   <div className="grid gap-2 sm:grid-cols-2">
                     {course.modules.map((mod) => (
                       <div key={mod} className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                        <span>{mod}</span>
+                        <CheckCircle2 className="h-4 w-4 text-[hsl(var(--google-green))] mt-0.5 shrink-0" />
+                        <span className="text-muted-foreground">{mod}</span>
                       </div>
                     ))}
                   </div>
