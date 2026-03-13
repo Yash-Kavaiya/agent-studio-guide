@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Wrench, FileText, Play, Github, ExternalLink } from "lucide-react";
+import { ArrowRight, BookOpen, Wrench, FileText, Play, Github, ExternalLink, CalendarCheck, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
@@ -151,6 +151,50 @@ const Index = () => {
                 </a>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Support & Community */}
+      <section className="py-16 md:py-24 bg-secondary/40">
+        <div className="container">
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="max-w-2xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Support & Community</h2>
+            <p className="text-muted-foreground text-lg">Get help, connect with others, and level up your agent-building skills.</p>
+          </motion.div>
+          <div className="grid gap-6 md:grid-cols-2 max-w-3xl mx-auto">
+            <motion.div custom={0} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+              <a href="https://topmate.io/yash_kavaiya" target="_blank" rel="noopener noreferrer">
+                <Card className="h-full hover:shadow-md transition-all group border-border">
+                  <CardContent className="p-6">
+                    <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[hsl(var(--google-blue))]/10 text-[hsl(var(--google-blue))] group-hover:bg-[hsl(var(--google-blue))] group-hover:text-primary-foreground transition-colors">
+                      <CalendarCheck className="h-5 w-5" />
+                    </div>
+                    <h3 className="font-semibold mb-1 text-foreground">1:1 Consultation</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Need hands‑on help? Book a 1:1 CX Agent Studio consultation on Topmate.</p>
+                    <span className="inline-flex items-center gap-1 text-sm text-primary font-medium">
+                      Book an Appointment <ExternalLink className="h-3.5 w-3.5" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </a>
+            </motion.div>
+            <motion.div custom={1} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+              <a href="https://www.reddit.com/r/CXAgentStudio/" target="_blank" rel="noopener noreferrer">
+                <Card className="h-full hover:shadow-md transition-all group border-border">
+                  <CardContent className="p-6">
+                    <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[hsl(var(--google-red))]/10 text-[hsl(var(--google-red))] group-hover:bg-[hsl(var(--google-red))] group-hover:text-primary-foreground transition-colors">
+                      <Users className="h-5 w-5" />
+                    </div>
+                    <h3 className="font-semibold mb-1 text-foreground">Community</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Join r/CXAgentStudio on Reddit — community discussions, tips, and support.</p>
+                    <span className="inline-flex items-center gap-1 text-sm text-primary font-medium">
+                      Join on Reddit <ExternalLink className="h-3.5 w-3.5" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </a>
+            </motion.div>
           </div>
         </div>
       </section>
