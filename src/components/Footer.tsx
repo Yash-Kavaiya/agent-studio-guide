@@ -50,6 +50,16 @@ const Footer = () => {
                   <Github className="h-3.5 w-3.5" /> GitHub
                 </a>
               </li>
+              <li>
+                <a href="https://www.reddit.com/r/CXAgentStudio/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors inline-flex items-center gap-1">
+                  🧑‍🤝‍🧑 Reddit Community
+                </a>
+              </li>
+              <li>
+                <a href="https://topmate.io/yash_kavaiya" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors inline-flex items-center gap-1">
+                  📅 Book Consultation <ExternalLink className="h-3 w-3" />
+                </a>
+              </li>
             </ul>
           </div>
         </div>
