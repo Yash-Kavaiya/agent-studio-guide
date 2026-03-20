@@ -155,6 +155,36 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Newsletter / Substack */}
+      <section className="py-16 md:py-24 bg-secondary/40">
+        <div className="container">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="max-w-2xl mx-auto text-center"
+          >
+            <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[hsl(var(--google-blue))]/10 text-[hsl(var(--google-blue))] mb-4">
+              <Mail className="h-6 w-6" />
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">Stay Updated</h2>
+            <p className="text-muted-foreground text-lg mb-6">
+              Get the latest tutorials, tools, and insights on CX Agent Studio delivered to your inbox.
+            </p>
+            <Button size="lg" asChild>
+              <a
+                href="https://substack.com/@yashkavaiya"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Subscribe on Substack <ExternalLink className="ml-1 h-4 w-4" />
+              </a>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Support & Community */}
       <section className="py-16 md:py-24 bg-secondary/40">
         <div className="container">
