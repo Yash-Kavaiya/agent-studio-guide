@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Wrench, FileText, Play, Github, ExternalLink, CalendarCheck, Users } from "lucide-react";
+import { ArrowRight, BookOpen, Wrench, FileText, Play, Github, ExternalLink, CalendarCheck, Users, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
