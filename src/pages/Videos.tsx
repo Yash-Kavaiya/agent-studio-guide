@@ -43,28 +43,35 @@ const Videos = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
               >
-                <Card className="h-full overflow-hidden hover:shadow-md transition-all group border-border">
-                  <div className="relative aspect-video bg-secondary flex items-center justify-center">
-                    <img
-                      src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`}
-                      alt={video.title}
-                      className="absolute inset-0 w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-foreground/20 group-hover:bg-foreground/30 transition-colors" />
-                    <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg group-hover:scale-110 transition-transform">
-                      <Play className="h-5 w-5 ml-0.5" />
+                <a
+                  href={`https://www.youtube.com/watch?v=${video.youtubeId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block h-full"
+                >
+                  <Card className="h-full overflow-hidden hover:shadow-md transition-all group border-border cursor-pointer">
+                    <div className="relative aspect-video bg-secondary flex items-center justify-center">
+                      <img
+                        src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`}
+                        alt={video.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-foreground/20 group-hover:bg-foreground/30 transition-colors" />
+                      <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg group-hover:scale-110 transition-transform">
+                        <Play className="h-5 w-5 ml-0.5" />
+                      </div>
+                      <Badge className="absolute top-3 right-3 bg-foreground/70 text-background text-xs">
+                        {video.duration}
+                      </Badge>
                     </div>
-                    <Badge className="absolute top-3 right-3 bg-foreground/70 text-background text-xs">
-                      {video.duration}
-                    </Badge>
-                  </div>
-                  <CardContent className="p-5">
-                    <Badge variant="secondary" className="text-xs mb-2">{video.category}</Badge>
-                    <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors text-foreground">{video.title}</h3>
-                    <p className="text-sm text-muted-foreground">{video.description}</p>
-                  </CardContent>
-                </Card>
+                    <CardContent className="p-5">
+                      <Badge variant="secondary" className="text-xs mb-2">{video.category}</Badge>
+                      <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors text-foreground">{video.title}</h3>
+                      <p className="text-sm text-muted-foreground">{video.description}</p>
+                    </CardContent>
+                  </Card>
+                </a>
               </motion.div>
             ))}
           </div>

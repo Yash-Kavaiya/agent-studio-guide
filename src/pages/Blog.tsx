@@ -26,8 +26,13 @@ const Blog = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
               >
-                <Link to={`/blog/${post.id}`}>
-                  <Card className="h-full hover:shadow-md transition-all group border-border">
+                <a
+                  href={post.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block h-full"
+                >
+                  <Card className="h-full hover:shadow-md transition-all group border-border cursor-pointer">
                     <CardContent className="p-6">
                       <div className="flex flex-wrap gap-2 mb-3">
                         {post.tags.map((tag) => (
@@ -47,7 +52,7 @@ const Blog = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </Link>
+                </a>
               </motion.div>
             ))}
           </div>
