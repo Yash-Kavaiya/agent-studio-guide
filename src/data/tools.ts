@@ -4,7 +4,7 @@ export interface Tool {
   description: string;
   url: string;
   emoji: string;
-  category: "resources" | "templates" | "integrations" | "api";
+  category: "resources" | "templates" | "integrations" | "api" | "cli";
   stars?: string;
 }
 
@@ -49,6 +49,30 @@ export const tools: Tool[] = [
     emoji: "💬",
     category: "integrations",
   },
+  {
+    id: "cx-agent-studio-cli",
+    name: "cx-agent-studio-cli",
+    description: "Command-line interface for managing CX Agent Studio projects and deployments.",
+    url: "https://github.com/Yash-Kavaiya/cx-agent-studio-cli",
+    emoji: "⚡",
+    category: "cli",
+  },
+  {
+    id: "cx-agent-studio-skill",
+    name: "cx-agent-studio-skill",
+    description: "Ready-to-use skills and capabilities for your CX agents.",
+    url: "https://github.com/Yash-Kavaiya/cx-agent-studio-skill",
+    emoji: "🎯",
+    category: "templates",
+  },
+  {
+    id: "cx-callback-generator-skills",
+    name: "cx-callback-generator-skills",
+    description: "Skills for generating callbacks and webhooks in CX Agent Studio.",
+    url: "https://github.com/Yash-Kavaiya/cx-callback-generator-skills",
+    emoji: "🔄",
+    category: "templates",
+  },
 ];
 
 export const toolCategories = [
@@ -57,4 +81,5 @@ export const toolCategories = [
   { key: "templates", label: "Templates" },
   { key: "integrations", label: "Integrations" },
   { key: "api", label: "API & Utilities" },
+  { key: "cli", label: "CLI Tools" },
 ];
