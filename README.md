@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
+# Agent Studio Guide
 
-## Project info
+A Vite, React, and TypeScript learning resource for agent-building content. The app organizes courses, blog posts, videos, and tools behind a polished Tailwind CSS/shadcn-ui interface.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Features
 
-## How can I edit this code?
+- Course, blog, video, and tool listing pages backed by local TypeScript data modules.
+- Client-side routing with React Router.
+- Reusable UI primitives from shadcn-ui/Radix UI.
+- Tailwind CSS design tokens and custom Google-themed color variables.
+- Vitest and Testing Library setup for unit and component tests.
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- [Vite](https://vitejs.dev/) for local development and production builds.
+- [React](https://react.dev/) with TypeScript.
+- [Tailwind CSS](https://tailwindcss.com/) for styling.
+- [shadcn-ui](https://ui.shadcn.com/) and Radix UI primitives.
+- [Vitest](https://vitest.dev/) for tests.
+- [ESLint](https://eslint.org/) for static analysis.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 18 or newer.
+- npm, which is included with Node.js.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Install dependencies
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Start the development server
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Vite prints the local URL in the terminal, usually `http://localhost:5173/`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Available Scripts
 
-**Use GitHub Codespaces**
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server. |
+| `npm run build` | Build the production app into `dist/`. |
+| `npm run build:dev` | Build with Vite's development mode. |
+| `npm run lint` | Run ESLint across the project. |
+| `npm run preview` | Preview the production build locally. |
+| `npm run test` | Run the Vitest test suite once. |
+| `npm run test:watch` | Run Vitest in watch mode. |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```text
+src/
+  components/      Shared layout, navigation, footer, and UI primitives.
+  data/            Local content data for courses, posts, videos, and tools.
+  hooks/           Shared React hooks.
+  lib/             Utility helpers.
+  pages/           Route-level page components.
+  test/            Test setup and example tests.
+```
 
-This project is built with:
+## Code Quality
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Before opening a pull request, run:
 
-## How can I deploy this project?
+```sh
+npm run lint
+npm run test
+npm run build
+```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Keep data models typed, colocate reusable UI in `src/components`, and prefer small route components that compose shared building blocks.
 
-## Can I connect a custom domain to my Lovable project?
+## Deployment
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The app builds to static assets with Vite. Any static hosting provider that can serve the generated `dist/` directory can host the project.
