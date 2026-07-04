@@ -1,0 +1,317 @@
+# Instincts generated from https://github.com/Yash-Kavaiya/agent-studio-guide
+# Generated: 2026-07-04T12:54:59.524Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: agent-studio-guide-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Commit Length
+
+## Action
+
+Keep commit messages concise (~31 characters)
+
+## Evidence
+
+- Average commit message length: 31 chars
+- Based on 1 commits
+
+---
+id: agent-studio-guide-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: agent-studio-guide-import-alias
+trigger: "when importing modules"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Import Alias
+
+## Action
+
+Use path aliases (@/, ~/) instead of relative imports
+
+## Evidence
+
+- Import analysis shows alias pattern
+- Example: import { x } from '@/lib/x'
+
+---
+id: agent-studio-guide-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: agent-studio-guide-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: components
+
+---
+id: agent-studio-guide-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: agent-studio-guide-instinct-file-naming
+trigger: "When creating a new file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Instinct File Naming
+
+## Action
+
+Name the file using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.files
+
+---
+id: agent-studio-guide-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: agent-studio-guide-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: agent-studio-guide-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: agent-studio-guide-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Instinct Import Style
+
+## Action
+
+Use alias import style
+
+## Evidence
+
+- Pattern in importStyle
+
+---
+id: agent-studio-guide-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Instinct Export Style
+
+## Action
+
+Use a mixed export style (both named and default as appropriate)
+
+## Evidence
+
+- Pattern in exportStyle
+
+---
+id: agent-studio-guide-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Instinct Test Location
+
+## Action
+
+Place test files in a separate location from source files
+
+## Evidence
+
+- Pattern in architecture.testLocation
+
+---
+id: agent-studio-guide-instinct-module-organization
+trigger: "When organizing modules in src"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Instinct Module Organization
+
+## Action
+
+Group modules by type
+
+## Evidence
+
+- Pattern in architecture.moduleOrganization
+
+---
+id: agent-studio-guide-instinct-folder-structure
+trigger: "When creating new components"
+confidence: 0.9
+domain: architecture
+source: repo-analysis
+source_repo: Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Instinct Folder Structure
+
+## Action
+
+Place them under src/components
+
+## Evidence
+
+- Pattern in architecture.srcLayout
+
+---
+id: agent-studio-guide-instinct-git-commit-format
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: Yash-Kavaiya/agent-studio-guide
+---
+
+# Agent Studio Guide Instinct Git Commit Format
+
+## Action
+
+Use a freeform message without a required prefix
+
+## Evidence
+
+- Pattern in commits.type
+- Example: 'Improve README and code quality'
+
