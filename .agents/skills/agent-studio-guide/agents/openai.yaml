@@ -1,0 +1,6 @@
+interface:
+  display_name: "Agent Studio Guide"
+  short_description: "Repo-specific patterns and workflows for agent-studio-guide"
+  default_prompt: "Use the agent-studio-guide repo skill to follow existing architecture, testing, and workflow conventions."
+policy:
+  allow_implicit_invocation: true
