@@ -4,12 +4,15 @@ import { Play, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import Layout from "@/components/Layout";
-import { videos, videoCategories, PLAYLIST_URL } from "@/data/videos";
+import { videos, videoCategories, PLAYLIST_URL, type Video } from "@/data/videos";
 
 const Videos = () => {
   const [filter, setFilter] = useState("All");
+  const [active, setActive] = useState<Video | null>(null);
   const filtered = filter === "All" ? videos : videos.filter((v) => v.category === filter);
+
 
   return (
     <Layout>
@@ -67,11 +70,11 @@ const Videos = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: Math.min(i * 0.03, 0.3) }}
               >
-                <a
-                  href={`https://www.youtube.com/watch?v=${video.youtubeId}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block h-full"
+                <button
+                  type="button"
+                  onClick={() => setActive(video)}
+                  aria-label={`Play ${video.title}`}
+                  className="block h-full w-full text-left rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   <Card className="google-card h-full overflow-hidden cursor-pointer group">
                     <div className="relative aspect-video bg-secondary flex items-center justify-center">
@@ -80,6 +83,9 @@ const Videos = () => {
                         alt={video.title}
                         className="absolute inset-0 w-full h-full object-cover"
                         loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.src = `https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`;
+                        }}
                       />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
                       <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-google group-hover:scale-105 transition-transform">
@@ -93,14 +99,48 @@ const Videos = () => {
                       </h3>
                     </CardContent>
                   </Card>
-                </a>
+                </button>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      <Dialog open={!!active} onOpenChange={(open) => !open && setActive(null)}>
+        <DialogContent className="max-w-3xl">
+          {active && (
+            <>
+              <DialogHeader>
+                <DialogTitle className="text-base leading-snug pr-6">{active.title}</DialogTitle>
+              </DialogHeader>
+              <div className="aspect-video w-full overflow-hidden rounded-lg bg-secondary">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${active.youtubeId}?autoplay=1&rel=0`}
+                  title={active.title}
+                  className="h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+              <div className="flex items-center justify-between gap-4">
+                <Badge variant="secondary" className="text-xs">{active.category}</Badge>
+                <Button variant="outline" size="sm" asChild className="rounded-full">
+                  <a
+                    href={`https://www.youtube.com/watch?v=${active.youtubeId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Watch on YouTube <ExternalLink className="ml-1 h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </Layout>
   );
 };
+
 
 export default Videos;

@@ -45,20 +45,15 @@ const BlogPost = () => {
             </div>
 
             <div className="prose prose-neutral max-w-none">
-              {post.content.split("\n").map((line, i) => {
-                if (line.startsWith("### ")) return <h3 key={i} className="text-xl font-bold mt-8 mb-3 text-foreground">{line.replace("### ", "")}</h3>;
-                if (line.startsWith("## ")) return <h2 key={i} className="text-2xl font-bold mt-10 mb-4 text-foreground">{line.replace("## ", "")}</h2>;
-                if (line.startsWith("```")) return null;
-                if (line.startsWith("- **")) {
-                  const match = line.match(/- \*\*(.+?)\*\*: (.+)/);
-                  if (match) return <li key={i} className="ml-4 mb-1 text-muted-foreground"><strong className="text-foreground">{match[1]}</strong>: {match[2]}</li>;
-                }
-                if (line.startsWith("- ")) return <li key={i} className="ml-4 mb-1 text-muted-foreground">{line.replace("- ", "")}</li>;
-                if (line.match(/^\d+\. /)) return <li key={i} className="ml-4 mb-1 list-decimal text-muted-foreground">{line.replace(/^\d+\. /, "")}</li>;
-                if (line.trim() === "") return <br key={i} />;
-                return <p key={i} className="text-muted-foreground leading-relaxed mb-3">{line}</p>;
-              })}
+              <p className="text-muted-foreground leading-relaxed mb-8">{post.excerpt}</p>
             </div>
+
+            <Button asChild className="rounded-full">
+              <a href={post.externalUrl} target="_blank" rel="noopener noreferrer">
+                Read the full article on {post.source === "medium" ? "Medium" : "Substack"}
+              </a>
+            </Button>
+
           </motion.div>
         </div>
       </article>
