@@ -236,6 +236,27 @@ const Courses = () => {
             </Card>
           </motion.div>
 
+          {/* Google Partner courses */}
+          {courses.length > 1 && (
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.14 }} className="mb-14">
+              <h2 className="text-2xl font-medium mb-4 text-foreground">Google Partner Skills</h2>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {courses.slice(1).map((c) => (
+                  <a key={c.id} href={c.url} target="_blank" rel="noopener noreferrer">
+                    <Card className="google-card h-full group">
+                      <CardContent className="p-5">
+                        <Badge variant="secondary" className="mb-3 text-xs">{c.platform}</Badge>
+                        <h3 className="font-medium mb-2 group-hover:text-primary transition-colors text-foreground leading-snug">{c.title}</h3>
+                        <p className="text-sm text-muted-foreground mb-3">{c.description}</p>
+                        <span className="text-xs text-muted-foreground">{c.level} · {c.duration}</span>
+                      </CardContent>
+                    </Card>
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+          )}
+
           {/* Key resources callout */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}

@@ -1,3 +1,5 @@
+export const PLAYLIST_URL = 'https://youtube.com/playlist?list=PLOAciEalMV3GGRZD2RJ7mjOEcI4DXQs0j';
+
 export interface Video {
   id: string;
   title: string;
@@ -9,33 +11,45 @@ export interface Video {
 }
 
 export const videos: Video[] = [
-  {
-    id: "video-0lKsU1iRyBc",
-    title: "Agent Studio Tutorial",
-    description: "Learn the fundamentals of building agents with CX Agent Studio.",
-    youtubeId: "0lKsU1iRyBc",
-    duration: "15:00",
-    category: "Getting Started",
-    date: "2025-03-15",
-  },
-  {
-    id: "video-dfvBNr4uLjk",
-    title: "Advanced Agent Features",
-    description: "Explore advanced features and capabilities in CX Agent Studio.",
-    youtubeId: "dfvBNr4uLjk",
-    duration: "20:00",
-    category: "Advanced",
-    date: "2025-03-16",
-  },
-  {
-    id: "video-kX-DkvaHCiE",
-    title: "Agent Integration Guide",
-    description: "Step-by-step guide to integrating your agents with external services.",
-    youtubeId: "kX-DkvaHCiE",
-    duration: "18:00",
-    category: "Integrations",
-    date: "2025-03-17",
-  },
+  { id: "video-0lKsU1iRyBc", title: "1 Create Agents with AI in CX Agent Studio Hindi", description: "1 Create Agents with AI in CX Agent Studio Hindi", youtubeId: "0lKsU1iRyBc", duration: "", category: "Demos & Tutorials", date: "2026" },
+  { id: "video-dfvBNr4uLjk", title: "2. Create CX Agents Ready for Production", description: "2. Create CX Agents Ready for Production", youtubeId: "dfvBNr4uLjk", duration: "", category: "Demos & Tutorials", date: "2026" },
+  { id: "video-kX-DkvaHCiE", title: "3. Build agents with CX Agent Studio: Challenge Lab", description: "3. Build agents with CX Agent Studio: Challenge Lab", youtubeId: "kX-DkvaHCiE", duration: "", category: "Course Labs", date: "2026" },
+  { id: "video-cOuQppyE3kg", title: "4. Configure and troubleshoot voice-based agents in CX Agent Studio", description: "4. Configure and troubleshoot voice-based agents in CX Agent Studio", youtubeId: "cOuQppyE3kg", duration: "", category: "Demos & Tutorials", date: "2026" },
+  { id: "video-rXKYdGX5gUI", title: "5.Leverage data store and connectors in your CX Agent Studio", description: "5.Leverage data store and connectors in your CX Agent Studio", youtubeId: "rXKYdGX5gUI", duration: "", category: "Demos & Tutorials", date: "2026" },
+  { id: "video-RSAFAeX1ruE", title: "Mastering cxas scrapi Claude, Sim Evals GitHub Actions", description: "Mastering cxas scrapi Claude, Sim Evals GitHub Actions", youtubeId: "RSAFAeX1ruE", duration: "", category: "SCRAPI & Tooling", date: "2026" },
+  { id: "video-fgsG6IJqbiY", title: "Hermes Agent + CXAS Scrapi || Create a Telecom PoC using Scrapi CLI", description: "Hermes Agent + CXAS Scrapi || Create a Telecom PoC using Scrapi CLI", youtubeId: "fgsG6IJqbiY", duration: "", category: "SCRAPI & Tooling", date: "2026" },
+  { id: "video-hDd6rnVgltY", title: "How to setup and config Cxas Scrape in Cloud Shell", description: "How to setup and config Cxas Scrape in Cloud Shell", youtubeId: "hDd6rnVgltY", duration: "", category: "SCRAPI & Tooling", date: "2026" },
+  { id: "video-cUX_arfk1oI", title: "Google Cloud Rapid Agent Hackathon", description: "Google Cloud Rapid Agent Hackathon", youtubeId: "cUX_arfk1oI", duration: "", category: "Labs & Hackathons", date: "2026" },
+  { id: "video-huz4_V208_g", title: "CX Agent Studio Development in VS Code: Dev & Test Agent", description: "CX Agent Studio Development in VS Code: Dev & Test Agent", youtubeId: "huz4_V208_g", duration: "", category: "Demos & Tutorials", date: "2026" },
+  { id: "video-P5eHhQwmNqo", title: "Gemini CLI: Google's FREE AI Agent in Your Terminal (1M Token Context!) 🚀", description: "Gemini CLI: Google's FREE AI Agent in Your Terminal (1M Token Context!) 🚀", youtubeId: "P5eHhQwmNqo", duration: "", category: "Demos & Tutorials", date: "2026" },
+  { id: "video-5JceSMSINcs", title: "CX Agent Studio Callbacks Explained in 60 Seconds 🔧 6 Python Hooks #aiagents #GECX #cxagentstudio", description: "CX Agent Studio Callbacks Explained in 60 Seconds 🔧 6 Python Hooks #aiagents #GECX #cxagentstudio", youtubeId: "5JceSMSINcs", duration: "", category: "Shorts", date: "2026" },
+  { id: "video-Ap12cVOxtZQ", title: "Automate Google CX Agent Studio with Python 🤖 | CXAS SCRAPI #Shorts", description: "Automate Google CX Agent Studio with Python 🤖 | CXAS SCRAPI #Shorts", youtubeId: "Ap12cVOxtZQ", duration: "", category: "Shorts", date: "2026" },
+  { id: "video-THI7ksXxSLw", title: "Day 1/30: What Is CX Agent Studio? | 30 Days of CX Agent Studio #Shorts #gecx #cxas #cxagentstudio", description: "Day 1/30: What Is CX Agent Studio? | 30 Days of CX Agent Studio #Shorts #gecx #cxas #cxagentstudio", youtubeId: "THI7ksXxSLw", duration: "", category: "Shorts", date: "2026" },
+  { id: "video-yrczIKFADYs", title: "Day 2/30: Architecture Overview | 30 Days of CX Agent Studio #Shorts #GECX #cxagentstudio #cxas", description: "Day 2/30: Architecture Overview | 30 Days of CX Agent Studio #Shorts #GECX #cxagentstudio #cxas", youtubeId: "yrczIKFADYs", duration: "", category: "Shorts", date: "2026" },
+  { id: "video-dyQg0sl21A8", title: "Day 3/30: Getting Started: Your First Agent | 30 Days of CX Agent Studio #Shorts #gecx #cxas", description: "Day 3/30: Getting Started: Your First Agent | 30 Days of CX Agent Studio #Shorts #gecx #cxas", youtubeId: "dyQg0sl21A8", duration: "", category: "Shorts", date: "2026" },
+  { id: "video-8tzCQDOz67c", title: "Day 5/30: Variables & State Management | 30 Days of CX Agent Studio #gecx #cxas #cxagentstudio", description: "Day 5/30: Variables & State Management | 30 Days of CX Agent Studio #gecx #cxas #cxagentstudio", youtubeId: "8tzCQDOz67c", duration: "", category: "30 Days Series", date: "2026" },
+  { id: "video-eqQqxRjkuho", title: "Day 6/30: Tools Function Calling | 30 Days of CX Agent Studio #gecx #cxagentstudio #function_calling", description: "Day 6/30: Tools Function Calling | 30 Days of CX Agent Studio #gecx #cxagentstudio #function_calling", youtubeId: "eqQqxRjkuho", duration: "", category: "30 Days Series", date: "2026" },
+  { id: "video-dSR7zII3jkE", title: "Day 7/30: Callbacks & Lifecycle Hooks | 30 Days of CX Agent Studio #callbacks #cxas #gecx", description: "Day 7/30: Callbacks & Lifecycle Hooks | 30 Days of CX Agent Studio #callbacks #cxas #gecx", youtubeId: "dSR7zII3jkE", duration: "", category: "30 Days Series", date: "2026" },
+  { id: "video-hm3X6KXaeUE", title: "Day 8/30: Voice & Audio Integration | 30 Days of CX Agent Studio #gecx #cxas #voiceagents", description: "Day 8/30: Voice & Audio Integration | 30 Days of CX Agent Studio #gecx #cxas #voiceagents", youtubeId: "hm3X6KXaeUE", duration: "", category: "30 Days Series", date: "2026" },
+  { id: "video-ch7p0ZTfiNQ", title: "Day 9/30: Multi-Agent Patterns | 30 Days of CX Agent Studio", description: "Day 9/30: Multi-Agent Patterns | 30 Days of CX Agent Studio", youtubeId: "ch7p0ZTfiNQ", duration: "", category: "30 Days Series", date: "2026" },
+  { id: "video-DHCh8UjUUUY", title: "Day 10/30: Evaluation & Guardrails | 30 Days of CX Agent Studio", description: "Day 10/30: Evaluation & Guardrails | 30 Days of CX Agent Studio", youtubeId: "DHCh8UjUUUY", duration: "", category: "30 Days Series", date: "2026" },
+  { id: "video-DMXmQAX6Mew", title: "Day 11/30: Production Auth & Secret Manager 30 Days of CX Agent Studio #Shorts #gecx #cxagentstudio", description: "Day 11/30: Production Auth & Secret Manager 30 Days of CX Agent Studio #Shorts #gecx #cxagentstudio", youtubeId: "DMXmQAX6Mew", duration: "", category: "Shorts", date: "2026" },
+  { id: "video-6_k5hg46dJM", title: "Day 12/30: Error Handling & Retry Strategies | 30 Days of CX Agent Studio #cxagentstudio #gecx", description: "Day 12/30: Error Handling & Retry Strategies | 30 Days of CX Agent Studio #cxagentstudio #gecx", youtubeId: "6_k5hg46dJM", duration: "", category: "30 Days Series", date: "2026" },
+  { id: "video-BkkFZf2jqWU", title: "Day 13/30: Migration from Dialogflow CX — Part 1 | 30 Days of CX Agent Studio #gecx #cxagentstudio", description: "Day 13/30: Migration from Dialogflow CX — Part 1 | 30 Days of CX Agent Studio #gecx #cxagentstudio", youtubeId: "BkkFZf2jqWU", duration: "", category: "30 Days Series", date: "2026" },
+  { id: "video-L950axtUWxc", title: "14 AI Agent Tools in CX Agent Studio 🛠️ | Full Breakdown #aiagents", description: "14 AI Agent Tools in CX Agent Studio 🛠️ | Full Breakdown #aiagents", youtubeId: "L950axtUWxc", duration: "", category: "Demos & Tutorials", date: "2026" },
+  { id: "video-c9UABEQsV8w", title: "MCP Integration | 30 Days of CX Agent Studio #Shorts", description: "MCP Integration | 30 Days of CX Agent Studio #Shorts", youtubeId: "c9UABEQsV8w", duration: "", category: "Shorts", date: "2026" },
+  { id: "video-nOyG0hUmLQI", title: "Day 14/30: Migration from Dialogflow CX — Part 2 | 30 Days of CX Agent Studio #gecx #dialogflowcx", description: "Day 14/30: Migration from Dialogflow CX — Part 2 | 30 Days of CX Agent Studio #gecx #dialogflowcx", youtubeId: "nOyG0hUmLQI", duration: "", category: "30 Days Series", date: "2026" },
+  { id: "video-ptXwuSJlFL4", title: "Day 17/30: Observability & Tracing | 30 Days of CX Agent Studio #cxagentstudio #googlecloud #tracing", description: "Day 17/30: Observability & Tracing | 30 Days of CX Agent Studio #cxagentstudio #googlecloud #tracing", youtubeId: "ptXwuSJlFL4", duration: "", category: "30 Days Series", date: "2026" },
+  { id: "video-H1tB9wJD7m4", title: "Day 18/30: Scaling & Performance Optimization | 30 Days of CX Agent Studio #cxagentstudio #gecx", description: "Day 18/30: Scaling & Performance Optimization | 30 Days of CX Agent Studio #cxagentstudio #gecx", youtubeId: "H1tB9wJD7m4", duration: "", category: "30 Days Series", date: "2026" },
+  { id: "video-LkgGucjrm3Y", title: "Day 19/30: Security Best Practices & IAM | 30 Days of CX Agent Studio #cxagentstudio #gecx", description: "Day 19/30: Security Best Practices & IAM | 30 Days of CX Agent Studio #cxagentstudio #gecx", youtubeId: "LkgGucjrm3Y", duration: "", category: "30 Days Series", date: "2026" },
+  { id: "video-jOztQn0p_Z8", title: "Create Agents with AI in CX Agent Studio -New lab", description: "Create Agents with AI in CX Agent Studio -New lab", youtubeId: "jOztQn0p_Z8", duration: "", category: "Course Labs", date: "2026" },
+  { id: "video-T1s8d5PuGzY", title: "Create CX Agents Ready for Production || New lab", description: "Create CX Agents Ready for Production || New lab", youtubeId: "T1s8d5PuGzY", duration: "", category: "Course Labs", date: "2026" },
+  { id: "video-NZBVfWTDFtE", title: "cx agent studio", description: "cx agent studio", youtubeId: "NZBVfWTDFtE", duration: "", category: "Demos & Tutorials", date: "2026" },
+  { id: "video-suDWKnZomp0", title: "Deploy agents to the web and third party channels from CX Agent Studio || New Lab", description: "Deploy agents to the web and third party channels from CX Agent Studio || New Lab", youtubeId: "suDWKnZomp0", duration: "", category: "Course Labs", date: "2026" },
+  { id: "video-cUT2kuX9tdg", title: "Vibe Code CX Agents with the Gemini CLI || New lab", description: "Vibe Code CX Agents with the Gemini CLI || New lab", youtubeId: "cUT2kuX9tdg", duration: "", category: "Course Labs", date: "2026" },
+  { id: "video-beRzS8h2HjA", title: "Use CX Agent Studio memory and deterministic capabilities", description: "Use CX Agent Studio memory and deterministic capabilities", youtubeId: "beRzS8h2HjA", duration: "", category: "Demos & Tutorials", date: "2026" },
+  { id: "video-kkhSh6KB2vs", title: "All About Google CX Agent Studio #cxas #gecx", description: "All About Google CX Agent Studio #cxas #gecx", youtubeId: "kkhSh6KB2vs", duration: "", category: "Demos & Tutorials", date: "2026" },
+  { id: "video-y55RKzrYd9c", title: "Evaluate CX Agents with SCRAPI", description: "Evaluate CX Agents with SCRAPI", youtubeId: "y55RKzrYd9c", duration: "", category: "SCRAPI & Tooling", date: "2026" },
 ];
 
-export const videoCategories = ["All", "Getting Started", "Advanced", "Integrations", "DevOps"];
+export const videoCategories = ["All", '30 Days Series', 'Course Labs', 'Demos & Tutorials', 'Labs & Hackathons', 'SCRAPI & Tooling', 'Shorts'];

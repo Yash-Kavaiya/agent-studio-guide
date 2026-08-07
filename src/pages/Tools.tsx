@@ -44,7 +44,7 @@ const Tools = () => {
                 transition={{ delay: i * 0.05 }}
               >
                 <a href={tool.url} target="_blank" rel="noopener noreferrer">
-                  <Card className="h-full hover:shadow-md transition-all group border-border">
+                  <Card className="h-full google-card group">
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between mb-3">
                         <span className="text-3xl">{tool.emoji}</span>

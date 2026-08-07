@@ -14,6 +14,14 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Roboto", "system-ui", "sans-serif"],
+        mono: ["Roboto Mono", "monospace"],
+      },
+      boxShadow: {
+        google: "0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15)",
+        "google-hover": "0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
